@@ -1,6 +1,7 @@
 // https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=orange
+// https://www.thecocktaildb.com/api/json/v1/1/search.php?s=apple
 const allCoctail = (searchTexts) => {
-  const url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${searchTexts}`;
+  const url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchTexts}`;
   fetch(url)
     .then((res) => res.json())
     .then((data) => coctail(data.drinks))
@@ -8,6 +9,12 @@ const allCoctail = (searchTexts) => {
 };
 const coctail = (data) => {
   console.log(data);
+  const drinks = document.getElementById("drinks");
+  if (data == null) {
+    drinks.innerText = 'not found your drinks!!';
+  } else {
+    drinks.innerText = "Your drinks";
+  }
   const cocktailContainer = document.getElementById("cocktailContainer");
   cocktailContainer.textContent = ``;
   data.forEach((element) => {
@@ -32,4 +39,4 @@ const coctail = (data) => {
 };
 searchingProcess("search-btn-1", "search-field-1");
 searchingProcess("search-btn-2", "search-field-2");
-allCoctail("gin");
+allCoctail('');
