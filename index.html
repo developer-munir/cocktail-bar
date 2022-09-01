@@ -74,19 +74,10 @@
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                    Dropdown
+                    Categories
                   </a>
-                  <ul class="dropdown-menu dropdown-menu-dark">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li>
-                      <a class="dropdown-item" href="#">Another action</a>
-                    </li>
-                    <li>
-                      <hr class="dropdown-divider" />
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </li>
+                  <ul class="dropdown-menu dropdown-menu-dark" id="categories-container">
+                    
                   </ul>
                 </li>
               </ul>
@@ -111,7 +102,9 @@
     <!-- main section -->
     <main class="container">
       <section>
-        <h1 class="text-center mt-5 text-uppercase py-5" id="drinks">Your drinks</h1>
+        <h1 class="text-center mt-5 text-uppercase py-5" id="drinks">
+          Your drinks
+        </h1>
         <div
           class="row row-cols-1 row-cols-md-3 g-4"
           id="cocktailContainer"

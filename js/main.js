@@ -11,7 +11,7 @@ const coctail = (data) => {
   console.log(data);
   const drinks = document.getElementById("drinks");
   if (data == null) {
-    drinks.innerText = 'not found your drinks!!';
+    drinks.innerText = "not found your drinks!!";
   } else {
     drinks.innerText = "Your drinks";
   }
@@ -35,8 +35,16 @@ const coctail = (data) => {
             </div>
         `;
     cocktailContainer.appendChild(div);
+    const categoritesContainer = document.getElementById(
+      "categories-container"
+    );
+    const li = document.createElement("li");
+    li.innerHTML = `
+    <li><a class="dropdown-item" href="#">${element.strDrink}</a></li>
+    `;
+    categoritesContainer.appendChild(li);
   });
 };
 searchingProcess("search-btn-1", "search-field-1");
 searchingProcess("search-btn-2", "search-field-2");
-allCoctail('');
+allCoctail("");
