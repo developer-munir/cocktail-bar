@@ -6,6 +6,9 @@
 body {
   overflow-x: hidden;
 }
+.shadow-card:hover{
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
 @media screen and (min-width: 768px) {
   #search-box {
     display: block !important;

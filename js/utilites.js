@@ -3,6 +3,7 @@ const searchFields = (fieldsId) => {
   const searchFieldValue = searchField.value;
   allCoctail(searchFieldValue);
   searchField.value = "";
+  spinner(true);
 };
 
 const searchingProcess = (buttonId, fieldId) => {
@@ -10,6 +11,5 @@ const searchingProcess = (buttonId, fieldId) => {
   button.addEventListener("click", (e) => {
     e.preventDefault();
     searchFields(fieldId);
-    // console.log(searchFieldValue);
   });
 };
